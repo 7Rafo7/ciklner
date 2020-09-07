@@ -152,3 +152,29 @@ function test15(){
 }
 
 //test15();
+
+
+function test16(){
+    for ($i = 1;$i<=9;$i++){
+        $x ='';
+        for ($y = 1;$y <=$i;$y++){
+            $x .= $i;
+        }
+        echo $x."<br>";
+    }
+}
+
+//test16();
+
+function test17(){
+    $x = [1,2,3,4,5,6,7,9,10,11];
+    $u = 0;
+    for ($i = $x[0]; $i <= count($x); $i++) {
+        if (!array_search($i,$x)){
+            $u = $i;
+        }
+    }
+    return $u;
+}
+
+echo test17();
