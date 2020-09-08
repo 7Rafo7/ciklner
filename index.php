@@ -177,4 +177,18 @@ function test17(){
     return $u;
 }
 
-echo test17();
+//echo test17();
+
+function test18(){
+    $x = [1,2,3,4,5,7,8,9];
+    $u = 0;
+    for ($i = $x[0]; $i<=count($x); $i++ ){
+        if ($i+1 != $x[$i]){
+            $u =  $x[$i]-1;
+            break;
+        }
+    }
+    return $u;
+}
+
+echo test18();
