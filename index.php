@@ -180,7 +180,21 @@ function test17(){
 //echo test17();
 
 function test18(){
-    $x = [1,2,3,4,5,7,8,9];
+    $x = [2,1,4,3,7,5,8,9];
+    $u = 0;
+    for ($i = $x[0]; $i<=count($x); $i++ ){
+        if ($i+1 != $x[$i]){
+            $u =  $x[$i]-1;
+            break;
+        }
+    }
+    return $u;
+}
+//echo test18();
+
+function test19(){
+    $x = [2,1,4,3,7,5,9,8];
+    sort($x);
     $u = 0;
     for ($i = $x[0]; $i<=count($x); $i++ ){
         if ($i+1 != $x[$i]){
@@ -191,4 +205,4 @@ function test18(){
     return $u;
 }
 
-echo test18();
+echo test19();
