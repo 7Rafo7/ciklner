@@ -19,7 +19,7 @@ function test2(){
 function test3($start,$end){
     $x = 0;
     for ($i = $start; $i<=$end; $i++){
-        $x = $i +$x;
+        $x = $i + $x;
     }
     return $x;
 }
@@ -205,4 +205,21 @@ function test19(){
     return $u;
 }
 
-echo test19();
+//echo test19();
+
+function test20(){
+    $x = [2,1,4,3,9,5,7,8];
+    $u = 0;
+    $y = 0;
+    $sum = 0;
+    for ($i = $x[0]; $i <= count($x); $i++ ){
+        if ($i<count($x)){
+            $u += $x[$i];
+        }
+        $y += $i + 1;
+        $sum = $y - $u;
+    }
+    return $sum;
+}
+echo test20();
+
